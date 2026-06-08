@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support</title>
+<style>
+  :root {
+    --fg: #1d1d1f;
+    --muted: #6e6e73;
+    --bg: #ffffff;
+    --accent: #0071e3;
+    --border: #e5e5ea;
+    --card: #f5f5f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .sub {
+    color: var(--muted);
+    margin: 0 0 40px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 40px 0 16px;
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+  summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+  details[open] summary::after { content: "\2212"; }
+  details p { margin: 14px 0 4px; color: var(--muted); }
+  .contact {
+    margin-top: 24px;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .contact h2 { margin-top: 0; }
+  .btn {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 980px;
+    font-weight: 500;
+  }
+  .btn:hover { text-decoration: none; opacity: 0.9; }
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Support</h1>
+  <p class="sub">Help and answers for all apps by Toru Kitajima.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Do these apps collect my personal data?</summary>
+    <p>No. Our apps do not collect, store, or share any personal information or usage data. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </details>
+
+  <details>
+    <summary>Is my data backed up or synced?</summary>
+    <p>Any content you create stays on your device only. We do not have access to it, so it is not synced to our servers. Use your device&rsquo;s iCloud or local backup to preserve your data.</p>
+  </details>
+
+  <details>
+    <summary>How do I report a bug or request a feature?</summary>
+    <p>Please use the contact option below. Include your device model, iOS version, and the name of the app so we can help you faster.</p>
+  </details>
+
+  <details>
+    <summary>The app isn&rsquo;t working correctly. What should I try first?</summary>
+    <p>Try fully closing and reopening the app, restarting your device, and making sure you are running the latest version from the App Store. If the issue continues, contact us below.</p>
+  </details>
+
+  <!-- CONTACT: replace href below with your contact form URL (e.g. a Google Form) before App Store submission, then un-hide the button. -->
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or need help? Please reach out and we&rsquo;ll get back to you as soon as possible.</p>
+    <!-- <a class="btn" href="REPLACE_WITH_CONTACT_FORM_URL">Open Contact Form</a> -->
+  </div>
+
+  <div class="footer">
+    &copy; 2026 [Developer Name]. All rights reserved.
+  </div>
+</div>
+</body>
+</html>
