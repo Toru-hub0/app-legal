@@ -3,16 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy</title>
+<title>Privacy Policy — Toru Kitajima Apps</title>
 <style>
   :root {
     --fg: #1d1d1f;
     --muted: #6e6e73;
     --bg: #ffffff;
-    --accent: #0071e3;
-    --border: #e5e5ea;
+    --soft: #f5f5f7;
+    --border: #e8e8ed;
+    --accent: #5b6cff;
+    --accent2: #8a5bff;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -21,67 +24,125 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 24px 96px;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0 0 8px;
-  }
-  .updated {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin: 0 0 40px;
-  }
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 40px 0 12px;
-  }
-  p { margin: 0 0 16px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .footer {
-    margin-top: 56px;
-    padding-top: 24px;
+
+  /* Header */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+  .logo {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: -0.5px;
+  }
+  nav a { color: var(--fg); font-size: 0.92rem; margin-left: 18px; opacity: 0.7; }
+  nav a:hover { opacity: 1; text-decoration: none; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #eef0ff 0%, #f6efff 100%);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 10px; }
+  .hero .updated { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+  /* Content */
+  .wrap { max-width: 720px; margin: 0 auto; padding: 8px 24px 80px; }
+  .card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-top: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card h2 {
+    font-size: 1.15rem; font-weight: 600; margin: 0 0 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .num {
+    flex: none;
+    width: 26px; height: 26px; border-radius: 8px;
+    background: var(--soft); color: var(--accent);
+    font-size: 0.85rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card p { margin: 0; color: #3a3a3c; }
+  .intro { margin-top: 28px; color: #3a3a3c; }
+
+  footer.site {
     border-top: 1px solid var(--border);
+    background: var(--soft);
+    padding: 28px 24px;
+    text-align: center;
     color: var(--muted);
     font-size: 0.85rem;
   }
+  footer.site a { margin: 0 10px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: June 8, 2026</p>
+  <header class="site">
+    <div class="brand"><span class="logo">TK</span> Toru Kitajima Apps</div>
+    <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+  </header>
 
-  <p>This Privacy Policy applies to all mobile applications (the &ldquo;Apps&rdquo;) published by <strong>Toru Kitajima</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) on the Apple App Store. By using any of our Apps, you agree to the terms described below.</p>
+  <section class="hero">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 8, 2026</p>
+  </section>
 
-  <h2>1. No Data Collection</h2>
-  <p>Our Apps do <strong>not</strong> collect, store, transmit, or share any personal information or usage data. We have no servers that receive information from the Apps, and we do not use any analytics, advertising, or tracking technologies.</p>
+  <main class="wrap">
+    <p class="intro">This Privacy Policy applies to all mobile applications (the &ldquo;Apps&rdquo;) published by <strong>Toru Kitajima</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) on the Apple App Store. By using any of our Apps, you agree to the terms described below.</p>
 
-  <h2>2. Information Stored on Your Device</h2>
-  <p>Any data you create within an App (such as settings or content) is stored locally on your device only. We do not have access to this data. If you delete an App, its locally stored data is removed along with it.</p>
+    <div class="card">
+      <h2><span class="num">1</span> No Data Collection</h2>
+      <p>Our Apps do <strong>not</strong> collect, store, transmit, or share any personal information or usage data. We have no servers that receive information from the Apps, and we do not use any analytics, advertising, or tracking technologies.</p>
+    </div>
 
-  <h2>3. Third-Party Services</h2>
-  <p>Our Apps do not integrate any third-party software development kits (SDKs) that collect data, including analytics, crash reporting, or advertising services.</p>
+    <div class="card">
+      <h2><span class="num">2</span> Information Stored on Your Device</h2>
+      <p>Any data you create within an App (such as settings or content) is stored locally on your device only. We do not have access to this data. If you delete an App, its locally stored data is removed along with it.</p>
+    </div>
 
-  <h2>4. Children&rsquo;s Privacy</h2>
-  <p>Because our Apps do not collect any data, they do not knowingly collect information from children of any age. The Apps are safe to use by all audiences in this respect.</p>
+    <div class="card">
+      <h2><span class="num">3</span> Third-Party Services</h2>
+      <p>Our Apps do not integrate any third-party software development kits (SDKs) that collect data, including analytics, crash reporting, or advertising services.</p>
+    </div>
 
-  <h2>5. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. Continued use of our Apps after changes are posted constitutes acceptance of the revised policy.</p>
+    <div class="card">
+      <h2><span class="num">4</span> Children&rsquo;s Privacy</h2>
+      <p>Because our Apps do not collect any data, they do not knowingly collect information from children of any age. The Apps are safe to use by all audiences in this respect.</p>
+    </div>
 
-  <h2>6. Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please reach out through our <a href="support.html">Support page</a>.</p>
+    <div class="card">
+      <h2><span class="num">5</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. Continued use of our Apps after changes are posted constitutes acceptance of the revised policy.</p>
+    </div>
 
-  <div class="footer">
-    &copy; 2026 Toru Kitajima. All rights reserved.
-  </div>
-</div>
+    <div class="card">
+      <h2><span class="num">6</span> Contact</h2>
+      <p>If you have any questions about this Privacy Policy, please reach out through our <a href="support.html">Support page</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div><a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></div>
+    <div style="margin-top:8px;">&copy; 2026 Toru Kitajima. All rights reserved.</div>
+  </footer>
 </body>
 </html>

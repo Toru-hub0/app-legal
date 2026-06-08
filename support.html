@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support</title>
+<title>Support — Toru Kitajima Apps</title>
 <style>
   :root {
     --fg: #1d1d1f;
     --muted: #6e6e73;
     --bg: #ffffff;
-    --accent: #0071e3;
-    --border: #e5e5ea;
-    --card: #f5f5f7;
+    --soft: #f5f5f7;
+    --border: #e8e8ed;
+    --accent: #5b6cff;
+    --accent2: #8a5bff;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -22,112 +24,127 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 24px 96px;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0 0 8px;
-  }
-  .sub {
-    color: var(--muted);
-    margin: 0 0 40px;
-  }
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 40px 0 16px;
-  }
-  p { margin: 0 0 16px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  details {
+
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid var(--border);
-    padding: 16px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+  .logo {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: -0.5px;
+  }
+  nav a { color: var(--fg); font-size: 0.92rem; margin-left: 18px; opacity: 0.7; }
+  nav a:hover { opacity: 1; text-decoration: none; }
+
+  .hero {
+    background: linear-gradient(135deg, #eef0ff 0%, #f6efff 100%);
+    padding: 64px 24px 56px; text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 10px; }
+  .hero p { color: var(--muted); margin: 0; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h2.section { font-size: 1.3rem; font-weight: 600; margin: 0 0 16px; }
+
+  details {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 4px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
   }
   summary {
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-weight: 600; cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0;
   }
   summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: "+";
-    color: var(--muted);
-    font-weight: 400;
-    font-size: 1.4rem;
-  }
+  summary::after { content: "+"; color: var(--accent); font-weight: 400; font-size: 1.5rem; }
   details[open] summary::after { content: "\2212"; }
-  details p { margin: 14px 0 4px; color: var(--muted); }
+  details p { margin: 0 0 16px; color: #3a3a3c; }
+
   .contact {
-    margin-top: 24px;
-    background: var(--card);
-    border-radius: 14px;
-    padding: 28px;
+    margin-top: 28px;
+    background: linear-gradient(135deg, #eef0ff 0%, #f6efff 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 32px;
+    text-align: center;
   }
-  .contact h2 { margin-top: 0; }
+  .contact h2 { margin: 0 0 10px; font-size: 1.3rem; }
+  .contact p { margin: 0 0 20px; color: #3a3a3c; }
   .btn {
     display: inline-block;
-    margin-top: 8px;
-    background: var(--accent);
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 980px;
-    font-weight: 500;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff; padding: 13px 30px; border-radius: 980px;
+    font-weight: 600; box-shadow: 0 6px 16px rgba(91,108,255,0.3);
   }
-  .btn:hover { text-decoration: none; opacity: 0.9; }
-  .footer {
-    margin-top: 56px;
-    padding-top: 24px;
+  .btn:hover { text-decoration: none; opacity: 0.95; }
+
+  footer.site {
     border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.85rem;
+    background: var(--soft);
+    padding: 28px 24px; text-align: center;
+    color: var(--muted); font-size: 0.85rem;
   }
+  footer.site a { margin: 0 10px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Support</h1>
-  <p class="sub">Help and answers for all apps by Toru Kitajima.</p>
+  <header class="site">
+    <div class="brand"><span class="logo">TK</span> Toru Kitajima Apps</div>
+    <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+  </header>
 
-  <h2>Frequently Asked Questions</h2>
+  <section class="hero">
+    <h1>Support</h1>
+    <p>Help and answers for all apps by Toru Kitajima.</p>
+  </section>
 
-  <details>
-    <summary>Do these apps collect my personal data?</summary>
-    <p>No. Our apps do not collect, store, or share any personal information or usage data. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
-  </details>
+  <main class="wrap">
+    <h2 class="section">Frequently Asked Questions</h2>
 
-  <details>
-    <summary>Is my data backed up or synced?</summary>
-    <p>Any content you create stays on your device only. We do not have access to it, so it is not synced to our servers. Use your device&rsquo;s iCloud or local backup to preserve your data.</p>
-  </details>
+    <details>
+      <summary>Do these apps collect my personal data?</summary>
+      <p>No. Our apps do not collect, store, or share any personal information or usage data. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    </details>
 
-  <details>
-    <summary>How do I report a bug or request a feature?</summary>
-    <p>Please use the contact option below. Include your device model, iOS version, and the name of the app so we can help you faster.</p>
-  </details>
+    <details>
+      <summary>Is my data backed up or synced?</summary>
+      <p>Any content you create stays on your device only. We do not have access to it, so it is not synced to our servers. Use your device&rsquo;s iCloud or local backup to preserve your data.</p>
+    </details>
 
-  <details>
-    <summary>The app isn&rsquo;t working correctly. What should I try first?</summary>
-    <p>Try fully closing and reopening the app, restarting your device, and making sure you are running the latest version from the App Store. If the issue continues, contact us below.</p>
-  </details>
+    <details>
+      <summary>How do I report a bug or request a feature?</summary>
+      <p>Please use the contact option below. Include your device model, iOS version, and the name of the app so we can help you faster.</p>
+    </details>
 
-  <div class="contact">
-    <h2>Contact Us</h2>
-    <p>Have a question or need help? Email us and we&rsquo;ll get back to you as soon as possible.</p>
-    <a class="btn" href="mailto:tuna.toko@gmail.com">Email Support</a>
-  </div>
+    <details>
+      <summary>The app isn&rsquo;t working correctly. What should I try first?</summary>
+      <p>Try fully closing and reopening the app, restarting your device, and making sure you are running the latest version from the App Store. If the issue continues, contact us below.</p>
+    </details>
 
-  <div class="footer">
-    &copy; 2026 Toru Kitajima. All rights reserved.
-  </div>
-</div>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p>Have a question or need help? Email us and we&rsquo;ll get back to you as soon as possible.</p>
+      <a class="btn" href="mailto:tuna.toko@gmail.com">Email Support</a>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div><a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></div>
+    <div style="margin-top:8px;">&copy; 2026 Toru Kitajima. All rights reserved.</div>
+  </footer>
 </body>
 </html>
