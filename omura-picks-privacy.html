@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大村ピックス - プライバシーポリシー / Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; color: #1f2328; line-height: 1.8; background: #fff; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #0E1117; padding-bottom: 8px; }
+  h2 { font-size: 1.15rem; margin-top: 2em; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { border: 1px solid #d0d7de; padding: 8px 12px; text-align: left; font-size: 0.95rem; }
+  th { background: #f6f8fa; }
+  .en { color: #57606a; font-size: 0.9rem; }
+  .box { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin: 1em 0; }
+  a { color: #0969da; }
+  footer { margin-top: 3em; font-size: 0.85rem; color: #57606a; }
+</style>
+</head>
+<body>
+
+<h1>大村ピックス — プライバシーポリシー</h1>
+<p class="en">Omura Picks (com.toruhub.omurapicks) — Privacy Policy</p>
+<p>最終更新日: 2026年9月1日 / Last updated: September 1, 2026</p>
+
+<p>
+  本ポリシーは、アプリ「<strong>大村ピックス</strong>」（開発者: Toru Kitajima / Toru-hub、
+  パッケージ名 <code>com.toruhub.omurapicks</code>）に適用されます。
+  同じ開発者の他のアプリには、
+  <a href="./privacy.html">共通のプライバシーポリシー</a>が適用されます。
+</p>
+
+<div class="box">
+  <strong>要点</strong><br>
+  本アプリは、サインインと通知のために必要な最小限の情報だけを取り扱います。
+  広告は表示せず、解析ツールも使わず、利用者を追跡（トラッキング）しません。
+  第三者にデータを販売・提供することもありません。<br>
+  <span class="en">This app collects only the minimum data needed for sign-in and notifications.
+  No ads, no analytics, no tracking, and no sale or sharing of your data.</span>
+</div>
+
+<h2>1. 取得する情報</h2>
+<table>
+  <tr><th>情報</th><th>目的</th><th>必須か</th></tr>
+  <tr><td>メールアドレス</td><td>サインイン（ワンタイムコードの送信）</td><td>必須</td></tr>
+  <tr><td>ユーザー ID</td><td>本人のデータを識別するため（アプリが内部で発行する識別子）</td><td>必須</td></tr>
+  <tr><td>プッシュ通知用のデバイストークン</td><td>締切前の通知を送るため</td><td>任意（通知を使う場合のみ）</td></tr>
+  <tr><td>アプリ内の設定</td><td>通知の可否、買い目の既定、1 レースの掛け金の既定</td><td>任意</td></tr>
+  <tr><td>「買った買い目」の記録</td><td>成績（的中率・回収率）の計算。組番・金額・日時</td><td>任意（利用者が自分で記録したときのみ）</td></tr>
+</table>
+
+<p>
+  次の情報は<strong>取得しません</strong>: 位置情報、連絡先、写真・動画、音声、
+  端末の広告識別子、利用状況の解析データ、金融口座やクレジットカードの情報。
+</p>
+<p class="en">
+  We do not collect location, contacts, photos, audio, advertising identifiers,
+  analytics data, or any financial account information.
+</p>
+
+<h2>2. 利用目的</h2>
+<p>
+  取得した情報は、サインイン、予想の表示、締切前の通知の送信、
+  成績（的中率・回収率）の計算にのみ利用します。
+  広告には利用せず、利用者を追跡（トラッキング）しません。
+</p>
+
+<h2>3. 保存場所と保護</h2>
+<p>
+  データは Supabase（PostgreSQL）に保存します。通信はすべて暗号化（HTTPS）されます。
+  行単位のアクセス制御（Row Level Security）により、自分のデータは本人以外が参照できません。
+  「買った買い目」の記録は、通信できないときにも失われないよう端末内にも控えを持ちます。
+</p>
+
+<h2>4. 第三者への提供</h2>
+<p>
+  法令に基づく場合を除き、第三者に提供・販売しません。
+  ただし、通知を届けるために、プッシュ通知用のデバイストークンは次のサービスを経由します。
+</p>
+<ul>
+  <li>Expo（プッシュ通知の配信）</li>
+  <li>Google FCM（Android の端末へ届けるため）</li>
+  <li>Apple APNs（iOS の端末へ届けるため）</li>
+</ul>
+<p>これらは通知を届けるためだけに使われ、広告や解析には使われません。</p>
+
+<h2>5. データの削除</h2>
+<p>
+  アカウントと保存されたデータの削除は、
+  <a href="./omura-picks-delete.html">アカウント削除のご案内</a>
+  の手順でリクエストできます。リクエスト受領後 30 日以内に削除し、完了をメールでお知らせします。
+</p>
+
+<h2>6. 本アプリでできないこと</h2>
+<p>
+  本アプリは<strong>舟券の購入・投票を行う機能を持ちません</strong>。
+  金額の記録は利用者が自分の収支を振り返るためのもので、実際の購入とは連動しません。
+  アプリ内での課金・決済もありません。
+  表示される予想は的中を保証するものではありません。
+</p>
+<p class="en">
+  This app does not provide any betting, wagering, or payment functionality.
+  Amounts recorded in the app are personal notes only and are not linked to any real purchase.
+</p>
+
+<h2>7. 年齢について</h2>
+<p>
+  本アプリは公営競技（ボートレース）の予想を扱うため、20 歳未満の方の利用を想定していません。
+  児童（13 歳未満）を対象としたサービスではなく、児童の情報を意図的に取得することもありません。
+</p>
+
+<h2>8. 本ポリシーの変更</h2>
+<p>
+  内容を変更する場合は、このページの「最終更新日」を更新して掲載します。
+</p>
+
+<h2>9. お問い合わせ</h2>
+<p>
+  <a href="mailto:toru.kitajima1023@gmail.com?subject=%E3%80%90%E5%A4%A7%E6%9D%91%E3%83%94%E3%83%83%E3%82%AF%E3%82%B9%E3%80%91%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">toru.kitajima1023@gmail.com</a>
+</p>
+
+<footer>
+  大村ピックス（com.toruhub.omurapicks）/ 開発者: Toru Kitajima<br>
+  <a href="./omura-picks-delete.html">アカウント削除のご案内</a> ·
+  <a href="./index.html">Support &amp; Privacy トップ</a>
+</footer>
+
+</body>
+</html>
