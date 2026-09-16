@@ -14,6 +14,13 @@
   .en { color: #57606a; font-size: 0.9rem; }
   .box { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin: 1em 0; }
   a { color: #0969da; }
+  /* 日本語の折り返し。数字と単位のあいだで切れないよう、本文側は禁則を効かせる */
+  body { word-break: normal; overflow-wrap: break-word; line-break: strict; }
+  /* 途中で改行させたくない塊（電話番号・時刻・金額など） */
+  .nw { white-space: nowrap; }
+  /* 表は狭い画面でははみ出す前に横スクロールへ逃がす */
+  .tw { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+  .tw table { margin: 0; }
   footer { margin-top: 3em; font-size: 0.85rem; color: #57606a; }
 </style>
 </head>
@@ -30,20 +37,20 @@
   解約・返金のお手続きも各ストアで行っていただきます。
 </div>
 
-<table>
-  <tr><th>販売事業者</th><td>Toru Kitajima（個人事業主 / 屋号: Toru-hub）</td></tr>
+<div class="tw"><table>
+  <tr><th>販売事業者</th><td>Toru Kitajima（個人事業主）</td></tr>
   <tr>
     <th>所在地・電話番号</th>
     <td>
       個人事業のため、このページでの掲載は控えています。
       <strong>ご請求があれば遅滞なく開示します。</strong>
       下記のお問い合わせ先へメールでご連絡ください
-      （特定商取引法施行規則第 10 条に基づく省略）。
+      （特定商取引法施行規則第10条に基づく省略）。
     </td>
   </tr>
   <tr><th>お問い合わせ先</th><td>
     <a href="mailto:tuna.toko@gmail.com?subject=%E3%80%90%E8%88%9F%E4%BA%88%E5%82%99%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">tuna.toko@gmail.com</a><br>
-    受付時間: 終日（返信は 3 営業日以内を目安とします）
+    受付時間: 終日（返信は 3営業日以内を目安とします）
   </td></tr>
   <tr><th>販売する役務</th><td>
     アプリ「舟予備」の有料プラン（プレミアム）。
@@ -51,7 +58,7 @@
     <strong>舟券の購入・投票を行う役務ではありません。</strong>
   </td></tr>
   <tr><th>販売価格</th><td>
-    月額 200 円（税込）。<br>
+    月額 200円（税込）。<br>
     <strong>実際の請求額は、購入時に各ストアが表示する価格が優先します</strong>
     （通貨・税率・ストアの価格改定により異なる場合があります）。
   </td></tr>
@@ -64,13 +71,13 @@
   </td></tr>
   <tr><th>支払時期</th><td>
     お申込み（購入の確定）時にお支払いいただき、以後、解約されるまで
-    <strong>1 か月ごとに自動で更新・課金</strong>されます。
+    <strong>1か月ごとに自動で更新・課金</strong>されます。
   </td></tr>
   <tr><th>役務の提供時期</th><td>
     決済の完了後ただちにご利用いただけます。
   </td></tr>
   <tr><th>解約の方法・条件</th><td>
-    更新日の<strong>24 時間前まで</strong>に、各ストアからお手続きください。
+    更新日の<strong>24時間前まで</strong>に、各ストアからお手続きください。
     <ul>
       <li>iPhone / iPad: 「設定」→ Apple アカウント →「サブスクリプション」</li>
       <li>Android: Google Play →「お支払いと定期購入」→「定期購入」</li>
@@ -92,10 +99,10 @@
   </td></tr>
   <tr><th>ご利用にあたっての注意</th><td>
     AI 予想は情報提供であり、的中・利益を保証するものではありません。
-    20 歳未満の方は舟券を購入できません。詳細は
+    20歳未満の方は舟券を購入できません。詳細は
     <a href="./omura-picks-terms.html">利用規約</a>をご確認ください。
   </td></tr>
-</table>
+</table></div>
 
 <footer>
   舟予備（com.toruhub.omurapicks）/ 販売事業者: Toru Kitajima<br>

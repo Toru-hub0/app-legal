@@ -16,6 +16,13 @@
   a { color: #0969da; }
   ol { padding-left: 1.4em; }
   ol li { margin: 0.4em 0; }
+  /* 日本語の折り返し。数字と単位のあいだで切れないよう、本文側は禁則を効かせる */
+  body { word-break: normal; overflow-wrap: break-word; line-break: strict; }
+  /* 途中で改行させたくない塊（電話番号・時刻・金額など） */
+  .nw { white-space: nowrap; }
+  /* 表は狭い画面でははみ出す前に横スクロールへ逃がす */
+  .tw { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+  .tw table { margin: 0; }
   footer { margin-top: 3em; font-size: 0.85rem; color: #57606a; }
 </style>
 </head>
@@ -29,7 +36,7 @@
   <strong>要点</strong><br>
   本アプリは<strong>情報を表示するだけ</strong>のアプリです。舟券の購入・投票はできません。
   表示する予想は的中や利益を保証しません。買うかどうか・いくら買うかは、
-  すべてご自身の判断と責任で決めてください。20 歳未満の方は舟券を購入できません。<br>
+  すべてご自身の判断と責任で決めてください。20歳未満の方は舟券を購入できません。<br>
   <span class="en">This app only displays information. It provides no betting functionality and
   does not guarantee any outcome or profit. All decisions are yours alone.</span>
 </div>
@@ -97,7 +104,7 @@
     <a href="./omura-picks-tokushoho.html">特定商取引法に基づく表記</a>に記載します。</li>
   <li>決済は Apple または Google が行います。購読の解約・返金の取扱いは、
     各ストアの規定に従います。</li>
-  <li>更新日の 24 時間前までに解約されない限り、自動的に更新されます。
+  <li>更新日の 24時間前までに解約されない限り、自動的に更新されます。
     期間途中の解約による日割りの返金はありません。</li>
   <li>データの配信が遅れる、または一時的に予想を出せないことがあります。
     その場合も購読期間は進みます。ただし、当方の責めに帰すべき事由により
@@ -107,11 +114,11 @@
 
 <h2>第7条（年齢・のめり込みについて）</h2>
 <ol>
-  <li>本アプリは公営競技の予想を扱うため、<strong>20 歳未満の方の利用を想定していません</strong>。
-    20 歳未満の方は舟券を購入できません。</li>
+  <li>本アプリは公営競技の予想を扱うため、<strong>20歳未満の方の利用を想定していません</strong>。
+    20歳未満の方は舟券を購入できません。</li>
   <li>のめり込みにご注意ください。ご心配なときは、公営競技の施行者が開設している
     <a href="https://www.koeikyogi.jp/addiction/gcc.html">公営競技ギャンブル依存症カウンセリングセンター</a>
-    （0120-321-153・平日 9:00〜17:00）などにご相談いただけます。</li>
+    （<span class="nw">0120-321-153</span>・<span class="nw">平日 9:00〜17:00</span>）などにご相談いただけます。</li>
 </ol>
 
 <h2>第8条（免責と責任の範囲）</h2>
@@ -124,7 +131,7 @@
     損害、および消費者契約法その他の法令により免責が認められない場合については、
     当方は法令に従って責任を負います</strong>。
     この場合の賠償額は、当方に故意または重大な過失がある場合を除き、
-    利用者が直前の 12 か月間に当方に支払った購読料の総額を上限とします。</li>
+    利用者が直前の 12か月間に当方に支払った購読料の総額を上限とします。</li>
 </ol>
 
 <h2>第9条（サービスの変更・終了）</h2>

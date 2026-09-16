@@ -14,6 +14,13 @@
   .en { color: #57606a; font-size: 0.9rem; }
   .box { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin: 1em 0; }
   a { color: #0969da; }
+  /* 日本語の折り返し。数字と単位のあいだで切れないよう、本文側は禁則を効かせる */
+  body { word-break: normal; overflow-wrap: break-word; line-break: strict; }
+  /* 途中で改行させたくない塊（電話番号・時刻・金額など） */
+  .nw { white-space: nowrap; }
+  /* 表は狭い画面でははみ出す前に横スクロールへ逃がす */
+  .tw { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; }
+  .tw table { margin: 0; }
   footer { margin-top: 3em; font-size: 0.85rem; color: #57606a; }
 </style>
 </head>
@@ -21,7 +28,7 @@
 <h1>舟予備 — アカウント削除のご案内</h1>
 <p class="en">Funayobi (com.toruhub.omurapicks) — How to request account deletion</p>
 
-<p>本ページでは、アプリ「<strong>舟予備</strong>」（旧称「大村ピックス」。開発者: Toru Kitajima / Toru-hub）のアカウントと、それに関連するデータの削除をリクエストする方法をご案内します。</p>
+<p>本ページでは、アプリ「<strong>舟予備</strong>」（旧称「大村ピックス」。開発者: Toru Kitajima）のアカウントと、それに関連するデータの削除をリクエストする方法をご案内します。</p>
 
 <h2>アカウント削除のリクエスト方法</h2>
 <div class="box">
@@ -44,7 +51,7 @@
 </div>
 
 <h2>削除されるデータ</h2>
-<table>
+<div class="tw"><table>
   <tr><th>データの種類</th><th>取り扱い</th></tr>
   <tr><td>メールアドレス（サインイン用）</td><td>削除</td></tr>
   <tr><td>ユーザー ID（アカウント識別子）</td><td>削除</td></tr>
@@ -54,7 +61,7 @@
   <tr><td>アプリ内の設定（通知の可否・買い目の既定など）</td><td>削除</td></tr>
   <tr><td>端末の機種名・アプリのバージョン（通知用に保存したもの）</td><td>削除</td></tr>
   <tr><td>購読の状態（有効 / 無効）</td><td>削除。ただし課金の履歴は各ストアと購読管理の委託先（RevenueCat）に、会計・税務上必要な期間残ることがあります</td></tr>
-</table>
+</table></div>
 
 <h2>保持されるデータ</h2>
 <p>アカウント削除後に保持される個人データはありません。ただし、法令上の義務がある場合に限り、必要な範囲・期間でデータを保持することがあります。</p>
