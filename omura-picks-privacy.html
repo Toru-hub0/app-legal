@@ -28,10 +28,12 @@
 
 <h1>舟予備 — プライバシーポリシー</h1>
 <p class="en">Funayobi (com.toruhub.omurapicks) — Privacy Policy</p>
-<p>最終更新日: 2026年9月16日 / Last updated: September 16, 2026</p>
+<p>改訂案作成日: 2026年10月3日 / Draft revision: October 3, 2026</p>
+<p class="box"><strong>公開前の確認用原稿です。</strong>運営者の承認・問い合わせ窓口の確認、
+外国でのデータ取扱いと保存・削除手順の確認が完了するまで、公開用のポリシーとして使用しません。</p>
 
 <p>
-  本ポリシーは、アプリ「<strong>舟予備</strong>」（旧称「大村ピックス」。開発者: Toru Kitajima、
+  本ポリシーは、北島徹（Toru Kitajima）が運営するアプリ「<strong>舟予備</strong>」（旧称「大村ピックス」、
   パッケージ名 <code>com.toruhub.omurapicks</code>）に適用されます。
   同じ開発者の他のアプリには、
   <a href="./privacy.html">共通のプライバシーポリシー</a>が適用されます。
@@ -40,13 +42,15 @@
 <div class="box">
   <strong>要点</strong><br>
   本アプリは、サインイン・通知・購読の管理に必要な最小限の情報だけを取り扱います。
-  広告は表示せず、解析ツールも使わず、利用者を追跡（トラッキング）しません。
+  広告は表示せず、広告目的で利用者を追跡（トラッキング）しません。
+  購読の管理・購入履歴の分析にはRevenueCatを使用します。
   第三者にデータを販売することもありません。
   アプリ内で有料の月額プラン（自動更新）を提供していますが、
   <strong>クレジットカード番号などの決済情報は当方では一切取得しません</strong>
   （決済は Apple / Google が行います）。<br>
   <span class="en">This app collects only the minimum data needed for sign-in, notifications and
-  subscription management. No ads, no analytics, no tracking, and we never sell your data.
+  subscription management. No ads or advertising tracking; we never sell your data.
+  RevenueCat is used for subscription management and purchase-history analytics.
   The app offers an auto-renewing monthly subscription; payment is processed by Apple / Google
   and we never receive your card details.</span>
 </div>
@@ -54,23 +58,25 @@
 <h2>1. 取得する情報</h2>
 <div class="tw"><table>
   <tr><th>情報</th><th>目的</th><th>必須か</th></tr>
-  <tr><td>メールアドレス</td><td>サインイン（ワンタイムコードの送信）</td><td>必須</td></tr>
-  <tr><td>ユーザー ID</td><td>本人のデータを識別するため（アプリが内部で発行する識別子）</td><td>必須</td></tr>
+  <tr><td>メールアドレス</td><td>任意のサインイン（ワンタイムコードの送信）・お問い合わせ</td><td>任意。予想の閲覧に登録は不要です</td></tr>
+  <tr><td>ユーザー ID</td><td>サインインした利用者の識別。購読管理ではRevenueCatの匿名IDまたはサインインのIDも使います</td><td>サインイン・購読管理を利用する場合</td></tr>
   <tr><td>プッシュ通知用のデバイストークン</td><td>締切前の通知を送るため</td><td>任意（通知を使う場合のみ）</td></tr>
   <tr><td>端末の機種名（例: iPhone 15）・アプリのバージョン・OS の種別</td><td>通知が届かないときの原因調査。どの端末のトークンかを見分けるため</td><td>任意（通知を使う場合のみ）</td></tr>
-  <tr><td>アプリ内の設定</td><td>通知の可否、買い目の既定、1レースの掛け金の既定、配色</td><td>任意</td></tr>
-  <tr><td>「買った買い目」の記録</td><td>成績（的中率・回収率）の計算。組番・金額・日時</td><td>任意（利用者が自分で記録したときのみ）</td></tr>
-  <tr><td>購読の状態（有効 / 無効）と、それに紐づくユーザー ID</td><td>有料プランの機能を提供するため</td><td>任意（購読する場合のみ）</td></tr>
+  <tr><td>アプリ内の設定・選手のお気に入り等</td><td>通知の可否、買い目の既定、1レースの掛け金の既定、配色等。端末に保存し、通知の設定だけをサーバにも送ります</td><td>任意</td></tr>
+  <tr><td>「買った買い目」の記録</td><td>成績（的中率・回収率）の計算。組番・金額・日時。一般の利用者は端末に保存し、サインイン利用者のサーバ保存はサーバの権限に従います</td><td>任意（利用者が自分で記録したときのみ）</td></tr>
+  <tr><td>購読の状態・購入履歴と、それに紐づくユーザー ID</td><td>有料プランの権限確認・購入の復元、RevenueCatでの購入履歴の分析</td><td>購読管理を利用する場合。匿名IDは未購入でも発行されることがあります</td></tr>
   <tr><td>年齢の確認に答えた日付</td><td>20歳以上であることの確認を繰り返さないため。<strong>端末内にのみ保存</strong>し、当方に送信されません</td><td>必須</td></tr>
 </table></div>
 
 <p>
   次の情報は<strong>取得しません</strong>: 生年月日・年齢そのもの、位置情報、連絡先、写真・動画、音声、
-  端末の広告識別子、利用状況の解析データ、金融口座やクレジットカードの情報。
+  端末の広告識別子、金融口座やクレジットカードの情報。
+  購入履歴の分析は上記の購読管理に含まれます。
 </p>
 <p class="en">
   We do not collect your date of birth or age, location, contacts, photos, audio,
-  advertising identifiers, analytics data, or any financial account information.
+  advertising identifiers, or any financial account information. Purchase-history analytics
+  are included in subscription management as described above.
 </p>
 
 <h2>2. 利用目的</h2>
@@ -82,7 +88,7 @@
   <li>予想・成績の表示</li>
   <li>締切前の通知の送信と、通知が届かないときの原因調査</li>
   <li>成績（的中率・回収率）の計算</li>
-  <li>有料プランの提供（購読状態の確認）</li>
+  <li>有料プランの提供（購読状態の確認・購入の復元）と購読の購入履歴の分析</li>
   <li>お問い合わせへの対応</li>
 </ul>
 <p>
@@ -92,10 +98,13 @@
 
 <h2>3. 保存場所と保護</h2>
 <p>
-  データは Supabase（PostgreSQL。Supabase Inc. が提供。サーバは<strong>米国</strong>にあります）に保存します。
+  認証情報、通知用トークン・通知設定、サーバ保存の権限がある利用者の記録は
+  Supabase（PostgreSQL）に保存します。一般の利用者の買い目の記録と年齢確認の答えは端末内が保存先です。
   通信はすべて暗号化（HTTPS）されます。
-  行単位のアクセス制御（Row Level Security）により、自分のデータは本人以外が参照できません。
-  「買った買い目」の記録と年齢確認の答えは、通信できないときにも失われないよう端末内にも控えを持ちます。
+  利用者のサーバ保存データは行単位のアクセス制御（Row Level Security）で制限します。
+  運営上必要な管理権限を持つ者による取扱いがあります。
+  開催日程・予想・結果・選手情報等の公開用データはサインインなしでも読み取れます。
+  記録の書き出しを利用した場合は、書き出したファイルの保存先・共有先の管理をご自身で行ってください。
 </p>
 <p>
   安全管理措置として、①アクセス権限を行単位で制限（Row Level Security）、
@@ -107,21 +116,20 @@
 <p>
   法令に基づく場合を除き、第三者に販売・提供しません。
   ただし、アプリの機能を提供するために、次の事業者に取扱いを委託しています。
-  <strong>いずれも所在国は米国です。</strong>
+  所在国と実際の保存・処理場所は別です。各サービスの保存・処理地域と、外国への提供に
+  用いる法的根拠・契約・確認手順は、公開前に運営者が確認して本ページに反映します。
 </p>
 <div class="tw"><table>
   <tr><th>委託先</th><th>渡す情報</th><th>目的</th></tr>
-  <tr><td>Supabase Inc.（米国）</td><td>上記1のうち端末内のみのものを除く全て</td><td>データベース・認証の提供</td></tr>
+  <tr><td>Supabase</td><td>任意のサインインのメール・ID、通知用トークン・端末情報・通知設定、サーバ保存権限がある利用者の記録</td><td>データベース・認証の提供</td></tr>
   <tr><td>Expo（Expo, Inc.・米国）</td><td>デバイストークン、通知の本文</td><td>プッシュ通知の配信</td></tr>
   <tr><td>Apple Inc.（米国）APNs</td><td>デバイストークン、通知の本文</td><td>iOS の端末へ通知を届けるため</td></tr>
   <tr><td>Google LLC（米国）FCM</td><td>デバイストークン、通知の本文</td><td>Android の端末へ通知を届けるため</td></tr>
-  <tr><td>RevenueCat, Inc.（米国）</td><td>ユーザー ID、購読の状態・購入履歴、端末の識別子</td><td>購読状態の管理（有料プランの権限付与）</td></tr>
+  <tr><td>RevenueCat, Inc.（米国）</td><td>匿名またはサインインのユーザー ID、購読の状態・購入履歴</td><td>購読状態の管理・復元と購入履歴の分析</td></tr>
 </table></div>
 <p>
-  これらは上記の目的のためだけに使われ、広告や解析には使われません。
-  米国は個人情報保護委員会が認定する国ではないため、当方は各社との契約により、
-  個人情報保護法に相当する水準の取扱いを確保しています。
-  米国の個人情報保護制度に関する情報は、個人情報保護委員会が公表する
+  広告目的のデータ販売・トラッキングは行いません。RevenueCatの購入履歴の分析は上記目的に含まれます。
+  外国での取扱いについては、個人情報保護委員会が公表する
   <a href="https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/#gaikoku">外国における個人情報の保護に関する制度等の調査</a>
   をご参照ください。
 </p>
@@ -133,7 +141,7 @@
 <ul>
   <li>決済は <strong>Apple（App Store）または Google（Google Play）</strong>が行います。
     クレジットカード番号・口座情報などの決済情報を当方が取得することはありません。</li>
-  <li>当方が受け取るのは<strong>購読が有効かどうか</strong>と、それに紐づくアプリ内のユーザー ID だけです。</li>
+  <li>購読管理では、購読状態・購入履歴と、それに紐づく匿名またはサインインのユーザー ID を扱います。</li>
   <li>購読状態の管理には RevenueCat, Inc.（米国）を利用します（上記4）。</li>
   <li>価格・支払時期・解約の条件は
     <a href="./omura-picks-tokushoho.html">特定商取引法に基づく表記</a>に記載しています。</li>
@@ -141,8 +149,9 @@
 
 <h2>6. 保存期間</h2>
 <p>
-  アカウントが存在する間は保存し、削除のご依頼を受けた場合は 30日以内に削除します。
-  通知用のデバイストークンは、通知を無効にしたときや端末で通知が使えなくなったときに無効化します。
+  アカウントを作成せずに利用する場合も、通知用トークンや購読管理の匿名IDが保存されることがあります。
+  保存期間・削除期限・委託先の削除手順は、公開前に運営者が確認して確定します。
+  アプリの通知設定は通知の種類ごとの配信可否を指定します。トークンの削除とは別の操作です。
   購読の履歴は、会計・税務上の必要がある期間に限り、上記の委託先および各ストアに残ることがあります。
 </p>
 
@@ -150,7 +159,10 @@
 <p>
   ご本人（または代理人）から、保有個人データの利用目的の通知、開示、訂正、追加、削除、
   利用の停止、第三者提供の停止のご請求ができます。
-  下記のお問い合わせ先へ<strong>登録済みのメールアドレスから</strong>メールでご連絡ください。
+  下記のお問い合わせ先へメールでご連絡ください。サインインしている方は、登録済みのメールからご連絡ください。
+  サインインしていない方もご請求できます。ご利用のOSと請求内容をお知らせください。
+  対象データの特定と本人確認に必要な情報・提出方法を、個別にご案内します。
+  パスワード、ワンタイムコード、クレジットカード番号は送らないでください。
   ご本人であることを確認したうえで、遅滞なく対応します（手数料はいただきません）。
   当方の氏名・住所は、ご請求いただいた方へ遅滞なくお知らせします
   （サイト上で公開することはありません）。
@@ -160,7 +172,8 @@
 <p>
   アカウントと保存されたデータの削除は、
   <a href="./omura-picks-delete.html">アカウント削除のご案内</a>
-  の手順でリクエストできます。リクエスト受領後 30日以内に削除し、完了をメールでお知らせします。
+  の手順でリクエストできます。匿名利用の通知用トークン・購読管理のデータについても請求を受け付けます。
+  本人確認と対象データの特定後に対応します。具体的な保存期間・削除期限は公開前に確定します。
   <strong>有料プランを購読中の場合、削除とは別に各ストアでの解約が必要です</strong>
   （削除しても自動更新は止まりません）。
 </p>
@@ -201,7 +214,7 @@
 </p>
 
 <footer>
-  舟予備（com.toruhub.omurapicks）/ 開発者: Toru Kitajima<br>
+  舟予備（com.toruhub.omurapicks）/ 運営者: 北島徹（Toru Kitajima）<br>
   <a href="./omura-picks-terms.html">利用規約</a> ·
   <a href="./omura-picks-tokushoho.html">特定商取引法に基づく表記</a> ·
   <a href="./omura-picks-delete.html">アカウント削除のご案内</a> ·
