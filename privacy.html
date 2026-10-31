@@ -103,25 +103,25 @@
 
   <section class="hero">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: August 28, 2026</p>
+    <p class="updated">Last updated: October 31, 2026</p>
   </section>
 
   <main class="wrap">
-    <p class="intro">This Privacy Policy applies to all mobile applications (the &ldquo;Apps&rdquo;) published by <strong>Toru Kitajima</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) on the Apple App Store. By using any of our Apps, you agree to the terms described below.</p>
+    <p class="intro">This Privacy Policy applies to all mobile applications (the &ldquo;Apps&rdquo;) published by <strong>Toru Kitajima</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) on the Apple App Store and Google Play. By using any of our Apps, you agree to the terms described below.</p>
 
     <div class="card">
       <h2><span class="num">1</span> Data Collection</h2>
-      <p>Most of our Apps do <strong>not</strong> collect, store, transmit, or share any personal information or usage data. They run entirely on your device, with no analytics, advertising, or tracking technologies. Some Apps offer optional online or multiplayer features; the limited data those features require is described in section 3 below. Apps that receive content updates also contact our update server as described in section 4. When used offline, our Apps transmit nothing.</p>
+      <p>Most of our Apps do <strong>not</strong> collect, store, transmit, or share any personal information or usage data. They run entirely on your device, with no analytics, advertising, or tracking technologies. Some Apps offer optional online or multiplayer features; the limited data those features require is described in section 3 below. PhotoShare, our photo-sharing app, stores the photos, videos, and account information needed to share them within your group, as described in section 6. Apps that receive content updates also contact our update server as described in section 4. When used offline, our Apps transmit nothing.</p>
     </div>
 
     <div class="card">
       <h2><span class="num">2</span> Information Stored on Your Device</h2>
-      <p>Any data you create within an App (such as settings or content) is stored locally on your device only. We do not have access to this data. If you delete an App, its locally stored data is removed along with it.</p>
+      <p>Any data you create within an App (such as settings or content) is stored locally on your device only, except for content you choose to share through an online feature (such as photos you upload to PhotoShare, see section 6). We do not have access to locally stored data. If you delete an App, its locally stored data is removed along with it.</p>
     </div>
 
     <div class="card">
       <h2><span class="num">3</span> Online &amp; Multiplayer Features</h2>
-      <p>Some of our Apps include optional online or multiplayer features (for example, playing a game with other people in real time). These features are only active when you choose to use them. When you do, the App creates an anonymous identifier so the server can tell players apart, and it sends the information needed to run the shared session &mdash; such as a display name you enter and your in-game actions &mdash; to our backend provider. We do <strong>not</strong> collect your real name, phone number, contacts, or location. Apps that offer an email-based backup or account-transfer feature collect your email address solely to verify that account. Apps that offer an AI reading feature transmit the photo, text, or audio you choose to an AI provider that you configure yourself (see section 5); that content is not sent to or stored on our backend. This information is used solely to operate the live session and is never used for analytics, advertising, or profiling. If you only use an App offline or in single-player mode, no information leaves your device.</p>
+      <p>Some of our Apps include optional online or multiplayer features (for example, playing a game with other people in real time). These features are only active when you choose to use them. When you do, the App creates an anonymous identifier so the server can tell players apart, and it sends the information needed to run the shared session &mdash; such as a display name you enter and your in-game actions &mdash; to our backend provider. We do <strong>not</strong> collect your real name, phone number, contacts, or location (PhotoShare uses the location recorded in photos you upload, as described in section 6). Apps that offer an email-based backup or account-transfer feature collect your email address solely to verify that account. Apps that offer an AI reading feature transmit the photo, text, or audio you choose to an AI provider that you configure yourself (see section 5); that content is not sent to or stored on our backend. This information is used solely to operate the live session and is never used for analytics, advertising, or profiling. If you only use an App offline or in single-player mode, no information leaves your device.</p>
       <p>Some of our Apps offer <strong>optional Game Center leaderboards</strong>. Game Center is Apple&rsquo;s own service, not ours. When you choose to open a ranking and sign in, the App submits your score to Apple, where it appears under the Game Center nickname on your Apple Account, and the ranking shows other players&rsquo; Game Center nicknames. We do not run a server for this, never receive your score, and never learn who you are. Signing in is always optional and is only ever requested when you open the ranking yourself &mdash; declining, cancelling, or being offline leaves the App fully playable, with only the ranking unavailable. Apple&rsquo;s Game Center terms and privacy policy govern that data, and you can sign out or hide yourself from leaderboards in the Game Center section of iOS Settings. Our Apps do not use Game Center matchmaking, multiplayer, or voice chat.</p>
     </div>
 
@@ -132,23 +132,44 @@
 
     <div class="card">
       <h2><span class="num">5</span> Third-Party Services</h2>
-      <p>Our Apps do not integrate third-party SDKs for analytics or advertising. The optional online features described in section 3 are powered by Supabase, a backend hosting provider that stores and relays session data on our behalf. Supabase processes only the data needed to run those features and does not use it for advertising or tracking. Where an App offers a Game Center leaderboard, the scores are held by Apple as part of Game Center &mdash; not by us and not by Supabase.</p>
+      <p>Our Apps do not integrate third-party SDKs for analytics or advertising. The optional online features described in section 3 are powered by Supabase, a backend hosting provider that stores and relays session data on our behalf. Supabase processes only the data needed to run those features and does not use it for advertising or tracking. Where an App offers a Game Center leaderboard, the scores are held by Apple as part of Game Center &mdash; not by us and not by Supabase. PhotoShare also uses Cloudflare, Resend, and Expo&rsquo;s push notification service, as listed in section 6.</p>
       <p>Some Apps include an optional AI reading feature. You supply your own API key for an AI provider (for example Google Gemini, OpenAI, or Anthropic). When you use the feature, the text, photo, or audio you choose is sent directly from your device to that provider using your key, and that provider&rsquo;s own terms and privacy policy apply to the request. We do not receive, process, or store this content, and it is not saved on our backend. If you do not enter a key, the feature is unavailable and nothing is sent.</p>
       <p>Apps that read printed notices or record spoken input ask for camera, photo library, or microphone access only at the moment you use those features. The captured photo or recording is used for that single reading request and is kept on your device; it is never uploaded to our backend.</p>
     </div>
 
+    <div class="card" id="photoshare">
+      <h2><span class="num">6</span> PhotoShare</h2>
+      <p>PhotoShare lets a small group of family or friends share photos and videos. Unlike our other Apps, sharing requires keeping data on our servers. PhotoShare shows no ads, uses no analytics or tracking, and we never sell your data.</p>
+      <p><strong>What we collect.</strong> Your email address (to sign in with a one-time code); an account identifier created by the App; the display name and optional profile picture you set; the photos and videos you choose to upload, stored in their original, uncompressed form together with thumbnails; the metadata contained in those files, such as the date taken, camera model, and the location where the photo was taken; albums, posts, comments, and likes; group join requests and approvals; and, if you allow notifications, a push notification token and your notification settings. We do not collect contacts, advertising identifiers, analytics data, or payment information. Photo library and camera access is requested only when you use those features, and only the photos and videos you select are uploaded.</p>
+      <p><strong>Location and photo analysis.</strong> If a photo contains location data, we use it to add the place name (such as the city) and nearby venue names so you can search photos by place. These names are looked up on a server we manage in Japan; locations are not sent to outside map services. Photos are also analyzed automatically so thumbnails do not cut off faces and good album covers can be chosen: when you upload, your device detects where faces are and sends only the resulting crop position, and a server we manage in Japan analyzes the stored thumbnails to count faces and people and score smiles and image quality. Faces are <strong>never</strong> used to identify anyone, no facial recognition data (face templates) is created or stored, and photos are not sent to outside analysis services. Because originals are stored unaltered, the metadata in each file is kept and is included when a group member downloads the original.</p>
+      <p><strong>Who can see it.</strong> Photos, videos, posts, comments, display names, and profile pictures are visible only to members of the same group, who join with an invite code and the approval of a group administrator. Albums can be limited to selected members. Nothing is public. Members can save photos they can view to their own devices; items already saved there are not removed when you delete them in the App.</p>
+      <p><strong>Where it is stored and who processes it.</strong> All connections are encrypted (HTTPS). Photos and videos are stored with Cloudflare, Inc. (United States) and copied to a server we manage in Japan for backup and long-term storage. Account, group, and post data is stored with Supabase Inc. (United States), with row-level access control so you cannot read groups you do not belong to. Sign-in emails are sent through Resend, Inc. (United States). Push notifications are relayed through 650 Industries, Inc. (Expo, United States) and Apple or Google. These providers process the data only to run the App.</p>
+      <p><strong>Retention and deletion.</strong> Photos and videos are kept until deleted; the uploader or a group administrator can delete them in the App at any time. You can delete your account in the App under Settings &rarr; Account, which removes your email address, sign-in information, member information, profile picture, and notification tokens. Photos and videos you shared with a group remain for the other members (without your name); delete them in the App first if you do not want them kept. Backup copies are removed after the original data is deleted. To request access, correction, or deletion of your data, contact us through our <a href="support.html">Support page</a>.</p>
+      <p><strong>Children.</strong> PhotoShare is not directed to children under 13. If you share photos or videos of children, please do so under a parent&rsquo;s or guardian&rsquo;s responsibility.</p>
+      <div lang="ja" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+        <p><strong>日本語の要約</strong></p>
+        <p>PhotoShare は、家族や友人など少人数のグループで写真・動画を共有するアプリです。広告は表示せず、解析ツールも使わず、利用者を追跡しません。データを販売しません。</p>
+        <p><strong>取得する情報</strong>：メールアドレス（サインインのため）、アプリが発行するアカウントの識別子、表示名とプロフィール画像（画像は任意）、アップロードした写真・動画（圧縮しない原本）とサムネイル、ファイルに含まれる撮影日時・機種・撮影場所の位置情報などのメタデータ、アルバム・投稿・コメント・いいね、グループへの参加申請と承認の記録、通知を許可した場合の通知用トークンと通知の設定。連絡先、広告識別子、利用状況の解析データ、決済情報は取得しません。</p>
+        <p><strong>撮影地と写真の自動解析</strong>：位置情報から撮影地の地名と施設名を付け、場所で写真を探せるようにします。この処理は開発者が日本国内で管理するサーバーで行い、位置情報を外部の地図サービスには送りません。また、サムネイルで顔が切れないようにし、アルバムの表紙を選ぶため、写真を自動で解析します。アップロードのとき端末で顔の位置を検出して切り抜きの中心だけを送り、開発者が日本国内で管理するサーバーで、保存済みのサムネイルから顔・人の数、笑顔の度合い、写りのよさを求めます。<strong>顔で個人を識別することはなく、顔認証に使える特徴量は作成も保存もしません。</strong>外部の解析サービスには送りません。</p>
+        <p><strong>公開範囲</strong>：写真・動画・投稿などは同じグループのメンバーだけが閲覧できます。参加には招待コードと管理者の承認が必要です。一般には公開されません。</p>
+        <p><strong>委託先（外国にある第三者を含む）</strong>：写真・動画の保存と配信は Cloudflare, Inc.（米国）、アカウントや投稿のデータは Supabase Inc.（米国）、認証メールの送信は Resend, Inc.（米国）、プッシュ通知の中継は 650 Industries, Inc.（Expo・米国）と Apple・Google に委託しています。写真・動画はバックアップのため、開発者が日本国内で管理するサーバーにも複製します。米国は、個人情報保護委員会が日本と同等の水準にあると認める国ではありません。各社が定めるデータ処理の取り決めにより、上記の目的に限って取り扱われます。米国の制度については、個人情報保護委員会の<a href="https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/#gaikoku">外国における個人情報の保護に関する制度等の調査</a>をご参照ください。</p>
+        <p><strong>保存期間と削除</strong>：写真・動画は削除するまで保存します。投稿した本人または管理者がアプリからいつでも削除できます。アカウントは「設定 → アカウント」から削除でき、メールアドレス・サインイン情報・メンバー情報・プロフィール画像・通知用トークンが消えます。グループで共有済みの写真・動画は、他のメンバーのために残ります（投稿者の表示は外れます）。開示・訂正・削除などのご請求は、<a href="support.html">サポートページ</a>のお問い合わせ先までご連絡ください。</p>
+        <p><strong>お子様</strong>：13 歳未満の方を対象としていません。お子様の写真は保護者の管理と責任のもとで共有してください。</p>
+      </div>
+    </div>
+
     <div class="card">
-      <h2><span class="num">6</span> Children&rsquo;s Privacy</h2>
+      <h2><span class="num">7</span> Children&rsquo;s Privacy</h2>
       <p>We do not knowingly collect personal information from children. Apps that collect no data are safe for all audiences in this respect, and the optional online features described above are not directed to children and do not gather any real-world identity.</p>
     </div>
 
     <div class="card">
-      <h2><span class="num">7</span> Changes to This Policy</h2>
+      <h2><span class="num">8</span> Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. Continued use of our Apps after changes are posted constitutes acceptance of the revised policy.</p>
     </div>
 
     <div class="card">
-      <h2><span class="num">8</span> Contact</h2>
+      <h2><span class="num">9</span> Contact</h2>
       <p>If you have any questions about this Privacy Policy, please reach out through our <a href="support.html">Support page</a>.</p>
     </div>
   </main>
